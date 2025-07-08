@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic LOGO Simulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="code-panel">
+        <div class="panel-header">LOGO Commands</div>
+        <div class="panel-content">
+          <textarea
+            id="editor"
+            placeholder="Enter LOGO commands here...
+Example:
+FORWARD 100
+RIGHT 90
+FORWARD 100
+RIGHT 90
+FORWARD 100
+RIGHT 90
+FORWARD 100"
+          ></textarea>
+          <div class="pattern-menu">
+            <div class="menu-header">
+              <h4>Pattern Library</h4>
+              <div class="filter-container">
+                <div class="custom-select">
+                  <div class="select-trigger">
+                    <span class="select-value">All Patterns</span>
+                    <svg
+                      class="select-arrow"
+                      width="9"
+                      height="8"
+                      viewBox="0 0 12 8"
+                      fill="none"
+                    >
+                      <path
+                        d="M1 1L6 6L11 1"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div class="select-dropdown">
+                    <div class="select-option active" data-value="all">
+                      All Patterns
+                    </div>
+                    <div class="select-option" data-value="basic">
+                      Basic Shapes
+                    </div>
+                    <div class="select-option" data-value="fractals">
+                      Fractals
+                    </div>
+                    <div class="select-option" data-value="geometric">
+                      Geometric Art
+                    </div>
+                    <div class="select-option" data-value="tetromino">
+                      Tetromino
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pattern-grid">
+              <div
+                class="pattern-card"
+                data-pattern="triangle"
+                data-category="basic"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">△</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Triangle</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="square"
+                data-category="basic"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">□</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Square</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="star"
+                data-category="basic"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">★</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Star</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="petals"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">❋</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Petals</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="polygons"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">⬟</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Polygons</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="repeatedTriangles"
+                data-category="fractals"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">▲▲</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Repeated Triangles</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="cubes"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">■</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Cubes</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="square_spirals"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">◩</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Square Spirals</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="sunflower"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">⚘</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Sunflower</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="tetromino"
+                data-category="tetromino"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">⊞</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Tetromino</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="circles"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">●</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Circles</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="starlight"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">✦</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Starlight</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="crystalline"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">❄</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Crystalline</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="web"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">※</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Web</h5>
+                </div>
+              </div>
+
+              <div
+                class="pattern-card"
+                data-pattern="flower"
+                data-category="geometric"
+              >
+                <div class="pattern-preview">
+                  <!-- Preview visual goes here -->
+                  <div class="preview-placeholder">❀</div>
+                </div>
+                <div class="pattern-info">
+                  <h5>Flower</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="controls">
+          <button id="run-btn">Run</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+      </div>
+      <div class="canvas-panel">
+        <div class="panel-header">
+          Turtle Canvas
+          <div id="turtle-position">X: 0, Y: 0, Angle: 0°</div>
+        </div>
+        <div class="panel-content">
+          <div id="canvas-container">
+            <canvas id="turtle-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
